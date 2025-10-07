@@ -30,6 +30,32 @@
     <title>Home - Netflix</title>
   </head>
   <body>
+
+             <style>
+            .swiper-button-prev,
+            .swiper-button-next {
+              color: white;
+              max-height: 30px;
+              max-width: 30px;
+            }
+
+            .swiper-button-prev:hover, 
+            .swiper-button-next:hover{
+              color: gray;
+            }
+
+            @media (max-width: 768px) {
+              .swiper-button-prev,
+              .swiper-button-next {
+                display: none;
+                max-height: 30px;
+                max-width: 30px;
+                
+              }
+            }
+
+          </style> 
+
     <!-- NavBar -->
     <nav>
       <div
@@ -230,14 +256,7 @@
 
           <!-- If we need navigation buttons -->
           <div class="swiper-button-prev max-h-8 text-orange-500"></div>
-          <div class="swiper-button-next max-h-8"></div>
-
-          <!-- <style>
-            .swiper-button-prev,
-            .swiper-button-next {
-              color: orange;
-            }
-          </style> -->
+          <div class="swiper-button-next max-h-8"></div> 
         </div>
       </section>
 
