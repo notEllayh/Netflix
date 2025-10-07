@@ -1,15 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script> -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <link
       href="https://cdn.boxicons.com/fonts/basic/boxicons.min.css"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"/>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"
+    />
     <!-- fontawesome 4.7.0  -->
     <link
       rel="stylesheet"
@@ -23,279 +26,592 @@
       href="https://assets.nflxext.com/ffe/siteui/common/icons/nficon2016.ico"
       type="image/x-icon"
     />
+    <link rel="stylesheet" href="./src/output.css" />
     <title>Home - Netflix</title>
-</head>
-<body>
-
-<!-- NavBar -->
+  </head>
+  <body>
+    <!-- NavBar -->
     <nav>
-        <div id="navbar" class="hidden lg:flex justify-between items-center bg-black/5 backdrop-blur-sm bg-opacity-75 fixed w-full z-10 transition duration-300">
-            <div class="flex items-center space-x-4">
-                <img src="Images/Netflix logo.jpg" alt="Netflix Logo" class="h-15">
-                <a href="#" class="text-white font-semibold">Home</a>
-                <a href="#" class="text-white font-semibold hover:text-gray-400">Series</a>
-                <a href="#" class="text-white font-semibold hover:text-gray-400">Films</a>
-                <a href="#" class="text-white font-semibold hover:text-gray-400">Games</a>
-                <a href="#" class="text-white font-semibold hover:text-gray-400">New & Popular</a>
-                <a href="#" class="text-white font-semibold hover:text-gray-400">My List</a>
-                <a href="#" class="text-white font-semibold hover:text-gray-400">Browse by Language</a>
-            </div>
+      <div
+        id="navbar"
+        class="hidden lg:flex justify-between items-center bg-black/5 backdrop-blur-sm bg-opacity-75 fixed w-full z-10 transition duration-300"
+      >
+        <div class="flex items-center space-x-4">
+          <img src="Images/Netflix logo.jpg" alt="Netflix Logo" class="h-15" />
+          <a href="#" class="text-white font-semibold">Home</a>
+          <a href="#" class="text-white font-semibold hover:text-gray-400"
+            >Series</a
+          >
+          <a href="#" class="text-white font-semibold hover:text-gray-400"
+            >Films</a
+          >
+          <a href="#" class="text-white font-semibold hover:text-gray-400"
+            >Games</a
+          >
+          <a href="#" class="text-white font-semibold hover:text-gray-400"
+            >New & Popular</a
+          >
+          <a href="#" class="text-white font-semibold hover:text-gray-400"
+            >My List</a
+          >
+          <a href="#" class="text-white font-semibold hover:text-gray-400"
+            >Browse by Language</a
+          >
+        </div>
 
-            <div class="flex items-center space-x-4">
-                <i class='bx bx-search text-white text-2xl cursor-pointer'></i>
-                <a href="#" class="text-white">Kids</a>
-                <a href="#" class="text-white">DVD</a>
-                <i class='bx bx-bell text-white text-2xl cursor-pointer'></i>
-                <img src="Images/Netflix-logo-profile.jpg" alt="Profile" class="h-8 w-8 rounded cursor-pointer">
+        <div class="flex items-center space-x-4">
+          <i class="bx bx-search text-white text-2xl cursor-pointer"></i>
+          <a href="#" class="text-white">Kids</a>
+          <a href="#" class="text-white">DVD</a>
+          <i class="bx bx-bell text-white text-2xl cursor-pointer"></i>
+          <img
+            src="Images/Netflix-logo-profile.jpg"
+            alt="Profile"
+            class="h-8 w-8 rounded cursor-pointer"
+          />
+        </div>
+      </div>
     </nav>
 
-<!-- SideNav -->
-    <div class="bg-black p-4 flex justify-between items-center lg:hidden fixed w-full z-10">
-    <div class="flex items-center space-x-4">
-        <img src="Images/Netflix logo.jpg" alt="Netflix Logo" class="h-15">
-        <a href="#" class="text-white font-semibold">Browse <i class='bx  bx-arrow-out-down-square-half text-center' id="menuBtn"></i></a>
-    </div>
+    <!-- SideNav -->
+    <div
+      class="bg-black p-4 flex justify-between items-center lg:hidden fixed w-full z-10"
+    >
+      <div class="flex items-center space-x-4">
+        <img src="Images/Netflix logo.jpg" alt="Netflix Logo" class="h-15" />
+        <a href="#" class="text-white font-semibold"
+          >Browse
+          <i
+            class="bx bx-arrow-out-down-square-half text-center"
+            id="menuBtn"
+          ></i
+        ></a>
+      </div>
 
-    <div class="flex items-center space-x-4">
-        <i class='bx bx-bell text-white text-2xl cursor-pointer'></i>
-        <img src="Images/Netflix-logo-profile.jpg" alt="Profile" class="h-8 w-8 rounded cursor-pointer">
-    </div>
+      <div class="flex items-center space-x-4">
+        <i class="bx bx-bell text-white text-2xl cursor-pointer"></i>
+        <img
+          src="Images/Netflix-logo-profile.jpg"
+          alt="Profile"
+          class="h-8 w-8 rounded cursor-pointer"
+        />
+      </div>
 
-     <aside id="sidenav" class="sidebar fixed top-22 left-0 w-[250px] h-80 text-gray-400 bg-black/95 shadow-2xl z-50 hidden">
+      <aside
+        id="sidenav"
+        class="sidebar fixed top-22 left-0 w-[250px] h-80 text-gray-400 bg-black/95 shadow-2xl z-50 hidden"
+      >
         <div class="p-4">
-            <ul class="flex flex-col text-center space-y-4">
-                <a href="">Home</a>
-                <a href="">Series</a>
-                <a href="">Films</a>
-                <a href="">Games</a>
-                <a href="">New & Popular</a>
-                <a href="">My List</a>
-                <a href="">Browse by Language</a>
-            </ul>
+          <ul class="flex flex-col text-center space-y-4">
+            <a href="">Home</a>
+            <a href="">Series</a>
+            <a href="">Films</a>
+            <a href="">Games</a>
+            <a href="">New & Popular</a>
+            <a href="">My List</a>
+            <a href="">Browse by Language</a>
+          </ul>
         </div>
-    </aside>
+      </aside>
     </div>
 
-<!-- Main Content -->
-     <main class="bg-[#141414] p-4">
-<!-- Hero Section -->
-        <div class="relative">
-            <img src="Images/LNS_101_LA_0301_9274_RT.webp" alt="Stranger Things" class="w-full h-[600px] object-cover">
-            <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent"></div>
-            <div class="absolute top-60 left-10 text-white space-y-4">
-                <h1 class="text-4xl font-bold">SPECIAL OPS: LIONESS</h1>
+    <!-- Main Content -->
+    <main class="bg-[#141414] p-4">
+      <!-- Hero Section -->
+      <div class="relative">
+        <img
+          src="Images/LNS_101_LA_0301_9274_RT.webp"
+          alt="Stranger Things"
+          class="w-full h-[600px] object-cover"
+        />
+        <div
+          class="absolute inset-0 bg-gradient-to-t from-black to-transparent"
+        ></div>
+        <div class="absolute top-60 left-10 text-white space-y-4">
+          <h1 class="text-4xl font-bold">SPECIAL OPS: LIONESS</h1>
 
-                <div class="flex items-center space-x-2 "> 
-                    <p class="bg-[#e50914] p-1 w-8 rounded">Top 10</p>
-                    <span>No.6 in Series Today</span>
-                </div>
-                <p class="max-w-lg">
-                A CIA operative juggles motherhood with her job leading an
-                undercover unit on high-risk missions as she sends her New
-                Marine recriuit out into the field.
-                </p>
+          <div class="flex items-center space-x-2">
+            <p class="bg-[#e50914] p-1 w-8 rounded">Top 10</p>
+            <span>No.6 in Series Today</span>
+          </div>
+          <p class="max-w-lg">
+            A CIA operative juggles motherhood with her job leading an
+            undercover unit on high-risk missions as she sends her New Marine
+            recriuit out into the field.
+          </p>
 
-                <div class="flex space-x-2">
-                <div class="flex items-center space-x-2 bg-white text-black px-8 py-2 rounded cursor-pointer hover:bg-gray-300">
-                    <i class='bx  bx-play font-semibold text-2xl' ></i> 
-                    <button class="font-semibold">Play</button>
-                </div>
-
-                <div class="flex items-center space-x-2 bg-[#4e4f50] text-black px-8 py-2 rounded hover:bg-[#6d6e70] cursor-pointer">
-                    <i class='bx  bx-info-circle font-semibold text-2xl' ></i> 
-                    <button class="font-semibold cursor-pointer">More Info</button>
-                </div>
-                </div>
-            </div>
-        </div>  
-        
-<!-- Emmy-winning Dark US Series -->
-<section class="bg-[#141414] p-4">
-            <div class="p-4 text-white">
-                <h2 class="text-xl font-bold">Emmy-winning Dark US Series</h2>
+          <div class="flex space-x-2">
+            <div
+              class="flex items-center space-x-2 bg-white text-black px-8 py-2 rounded cursor-pointer hover:bg-gray-300"
+            >
+              <i class="bx bx-play font-semibold text-2xl"></i>
+              <button class="font-semibold">Play</button>
             </div>
 
-<!-- Slider main container -->
-  <div class="swiper h-[200px]">
-<!-- Additional required wrapper -->
-  <div class="swiper-wrapper">
-<!-- Slides -->
-    <div class="swiper-slide cursor-pointer"><img src="Images/Dexter-netflix.webp" alt="" class="rounded hover:scale-105"></div>
-    <div class="swiper-slide cursor-pointer"><img src="Images/Breaking-bad-netflix.webp" alt="" class="rounded hover:scale-105"></div>
-    <div class="swiper-slide cursor-pointer"><img src="Images/Ozark-netflix.jpg" alt="" class="rounded hover:scale-105"></div>
-    <div class="swiper-slide cursor-pointer"><img src="Images/Law-&-order-netflix.webp" alt="" class="rounded hover:scale-105"></div>
-    <div class="swiper-slide cursor-pointer"><img src="Images/Dahmar-netflix.jpg" alt="" class="rounded hover:scale-105"></div>
-    <div class="swiper-slide cursor-pointer"><img src="Images/Monsters-netflixx.jpg" alt="" class="rounded hover:scale-105"></div>
-    <div class="swiper-slide cursor-pointer"><img src="Images/House-of-cards.jpg" alt="" class="rounded hover:scale-105"></div>
-    <div class="swiper-slide cursor-pointer"><img src="Images/Godless-netflix.jpg" alt="" class="rounded hover:scale-105"></div>
-    ...
-  </div>
-  
-<!-- If we need navigation buttons -->
-  <div class="swiper-button-prev"></div>
-  <div class="swiper-button-next"></div>
- </div>
-</section>
-
-<!-- Break Time? Have a Screen Snack -->
-<section class="bg-[#141414] p-4">
-            <div class="p-4 text-white">
-                <h2 class="text-xl font-bold">Break Time? Have a Screen Snack</h2>
+            <div
+              class="flex items-center space-x-2 bg-[#4e4f50] text-black px-8 py-2 rounded hover:bg-[#6d6e70] cursor-pointer"
+            >
+              <i class="bx bx-info-circle font-semibold text-2xl"></i>
+              <button class="font-semibold cursor-pointer">More Info</button>
             </div>
+          </div>
+        </div>
+      </div>
 
-<!-- Slider main container -->
-  <div class="swiper h-[200px]">
-<!-- Additional required wrapper -->
-  <div class="swiper-wrapper">
-<!-- Slides -->
-    <div class="swiper-slide cursor-pointer"><img src="ImagesTwo/Beauty-in-black-netflix.jpg" alt="" class="rounded hover:scale-105"></div>
-    <div class="swiper-slide cursor-pointer"><img src="ImagesTwo/Lioness-netflix.webp" alt="" class="rounded hover:scale-105"></div>
-    <div class="swiper-slide cursor-pointer"><img src="ImagesTwo/House-of-guinness.jpg" alt="" class="rounded hover:scale-105"></div>
-    <div class="swiper-slide cursor-pointer"><img src="ImagesTwo/Wednesday-netflix.jpg" alt="" class="rounded hover:scale-105"></div>
-    <div class="swiper-slide cursor-pointer"><img src="ImagesTwo/You-netflix.jpg" alt="" class="rounded hover:scale-105"></div>
-    <div class="swiper-slide cursor-pointer"><img src="ImagesTwo/The-resident-netflix.webp" alt="" class="rounded hover:scale-105"></div>
-    <div class="swiper-slide cursor-pointer"><img src="ImagesTwo/Billonaires'-bunker-netflix.jpg" alt="" class="rounded hover:scale-105"></div>
-    <div class="swiper-slide cursor-pointer"><img src="ImagesTwo/The-Night-Agent-netflix.jpg" alt="" class="rounded hover:scale-105"></div>
-    ...
-  </div>
-  
-<!-- If we need navigation buttons -->
-  <div class="swiper-button-prev"></div>
-  <div class="swiper-button-next"></div>
-
- </div>
-</section>
-
-
-<!-- Boredom Busters -->
-<section class="bg-[#141414] p-4">
-            <div class="p-4 text-white">
-                <h2 class="text-xl font-bold">Boredom Busters</h2>
-            </div>
-
-<!-- Slider main container -->
-  <div class="swiper h-[200px]">
-<!-- Additional required wrapper -->
-  <div class="swiper-wrapper">
-<!-- Slides -->
-    <div class="swiper-slide cursor-pointer"><img src="ImagesThree/Alice-in-borderland-netflix.jpg" alt="" class="rounded hover:scale-105"></div>
-    <div class="swiper-slide cursor-pointer"><img src="ImagesThree/Power-netflix.webp" alt="" class="rounded hover:scale-105"></div>
-    <div class="swiper-slide cursor-pointer"><img src="ImagesThree/Demon-slayer-netflix.webp" alt="" class="rounded hover:scale-105"></div>
-    <div class="swiper-slide cursor-pointer"><img src="ImagesThree/Swat-netflix.webp" alt="" class="rounded hover:scale-105"></div>
-    <div class="swiper-slide cursor-pointer"><img src="ImagesThree/Suits-netflix.webp" alt="" class="rounded hover:scale-105"></div>
-    <div class="swiper-slide cursor-pointer"><img src="ImagesThree/Pinky-blinders-netflix.webp" alt="" class="rounded hover:scale-105"></div>
-    <div class="swiper-slide cursor-pointer"><img src="ImagesThree/Man-on-fire-netflix.webp" alt="" class="rounded hover:scale-105"></div>
-    <div class="swiper-slide cursor-pointer"><img src="ImagesThree/Vikings-netflix.webp" alt="" class="rounded hover:scale-105"></div>
-    ...
-  </div>
-  
-<!-- If we need navigation buttons -->
-  <div class="swiper-button-prev"></div>
-  <div class="swiper-button-next"></div>
-
- </div>
-</section>
-
-
-<!-- Top 10 Series in UK Today -->
-<section class="bg-[#141414] p-4">
-            <div class="p-4 text-white">
-                <h2 class="text-xl font-bold">Top 10 Series in UK Today</h2>
-            </div>
-
-<!-- Slider main container -->
-  <div class="swiper h-[400px]">
-<!-- Additional required wrapper -->
-  <div class="swiper-wrapper">
-<!-- Slides -->
-        <div class="swiper-slide cursor-pointer"><img src="ImagesTop10/Monster-the-ed-story.jpg" alt="" class="rounded hover:scale-105"></div>
-        <div class="swiper-slide cursor-pointer"><img src="ImagesTop10/House-of-g.jpg" alt="" class="rounded hover:scale-105"></div>
-        <div class="swiper-slide cursor-pointer"><img src="ImagesTop10/Wayward-netflix.jpg" alt="" class="rounded hover:scale-105"></div>
-        <div class="swiper-slide cursor-pointer"><img src="ImagesTop10/Sullivans's-crossing.webp" alt="" class="rounded hover:scale-105"></div>
-        <div class="swiper-slide cursor-pointer"><img src="ImagesTop10/Dark-winds.webp" alt="" class="rounded hover:scale-105"></div>
-        <div class="swiper-slide cursor-pointer"><img src="ImagesTop10/Ops-lioness.webp" alt="" class="rounded hover:scale-105"></div>
-        <div class="swiper-slide cursor-pointer"><img src="ImagesTop10/Love-is-blind.jpg" alt="" class="rounded hover:scale-105"></div>
-        <div class="swiper-slide cursor-pointer"><img src="ImagesTop10/Black-rabbit.jpg" alt="" class="rounded hover:scale-105"></div>
-        <div class="swiper-slide cursor-pointer"><img src="ImagesTop10/Angela-netflix.jpg" alt="" class="rounded hover:scale-105"></div>
-        <div class="swiper-slide cursor-pointer"><img src="ImagesTop10/wwe-smackdown.jpg" alt="" class="rounded hover:scale-105"></div>
-    ...
-  </div>
-  
-<!-- If we need navigation buttons -->
-  <div class="swiper-button-prev"></div>
-  <div class="swiper-button-next"></div>
-
- </div>
-</section>
-
-<!-- My List -->
-<section class="bg-[#141414] p-4">
-            <div class="p-4 text-white">
-                <h2 class="text-xl font-bold">My List</h2>
-            </div>
-
-<!-- Slider main container -->
-  <div class="swiper h-[200px]">
-<!-- Additional required wrapper -->
-  <div class="swiper-wrapper">
-<!-- Slides -->
-    <div class="swiper-slide cursor-pointer"><img src="ImagesMyList/Big-mouth-netflix.jpg" alt="" class="rounded hover:scale-105"></div>
-    <div class="swiper-slide cursor-pointer"><img src="ImagesMyList/Sexlife-netflix.jpg" alt="" class="rounded hover:scale-105"></div>
-    <div class="swiper-slide cursor-pointer"><img src="ImagesMyList/Castlevina-netflix.jpg" alt="" class="rounded hover:scale-105"></div>
-    <div class="swiper-slide cursor-pointer"><img src="ImagesMyList/Bridgerton-netflix.jpg" alt="" class="rounded hover:scale-105"></div>
-    <div class="swiper-slide cursor-pointer"><img src="ImagesMyList/Narcos-netflix.jpg" alt="" class="rounded hover:scale-105"></div>
-    <div class="swiper-slide cursor-pointer"><img src="ImagesMyList/Grand-turismo-netflix.webp" alt="" class="rounded hover:scale-105"></div>
-    <div class="swiper-slide cursor-pointer"><img src="ImagesMyList/Rebel-ridge-netflix.jpg" alt="" class="rounded hover:scale-105"></div>
-    <div class="swiper-slide cursor-pointer"><img src="ImagesMyList/Downtown-abby-netflix.webp" alt="" class="rounded hover:scale-105"></div>
-    ...
-  </div>
-  
-<!-- If we need navigation buttons -->
-  <div class="swiper-button-prev"></div>
-  <div class="swiper-button-next"></div>
-
- </div>
-</section>
-</main>
-
-<!-- Footer -->
-
-<section class="bg-[#141414] p-8 items-center">
-    <footer>
-        <div class="text-gray-400 text-sm space-y-4">
-            <div class="flex space-x-4">
-            <a href="https://www.facebook.com/NetflixUK" target="_blank"><img src="ImagesSocialicons/facebook (1).png" alt="" class="h-6 w-6"></a>
-            <a href="https://www.instagram.com/NetflixUK/#" target="_blank"><img src="ImagesSocialicons/instagram (1).png" alt="" class="h-6 w-6"></a>
-            <a href="https://x.com/NetflixUK" target="_blank"><img src="ImagesSocialicons/twitter (1).png" alt="" class="h-6 w-6"></a>
-            <a href="https://www.youtube.com/user/netflixuk" target="_blank"><img src="ImagesSocialicons/youtube.png" alt="" class="h-6 w-6"></a>
-            </div>
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-                <a href="#" class="hover:underline">FAQ</a>
-                <a href="#" class="hover:underline">Help Centre</a>
-                <a href="#" class="hover:underline">Account</a>
-                <a href="#" class="hover:underline">Media Centre</a>
-                <a href="#" class="hover:underline">Investor Relations</a>
-                <a href="#" class="hover:underline">Jobs</a>
-                <a href="#" class="hover:underline">Ways to Watch</a>
-                <a href="#" class="hover:underline">Terms of Use</a>
-                <a href="#" class="hover:underline">Privacy</a>
-                <a href="#" class="hover:underline">Cookie Preferences</a>
-                <a href="#" class="hover:underline">Corporate Information</a>
-                <a href="#" class="hover:underline">Contact Us</a>
-                <a href="#" class="hover:underline">Speed Test</a>
-                <a href="#" class="hover:underline">Legal Notices</a>
-                <a href="#" class="hover:underline">Only on Netflix</a>
-            </div>
-            <p class="text-gray-500">Netflix United Kingdom</p>
+      <!-- Emmy-winning Dark US Series -->
+      <section class="bg-[#141414] p-4">
+        <div class="p-4 text-white">
+          <h2 class="text-xl font-bold">Emmy-winning Dark US Series</h2>
         </div>
 
-    </footer>
-</section>
-    
+        <!-- Slider main container -->
+        <div class="swiper h-[200px]">
+          <!-- Additional required wrapper -->
+          <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide cursor-pointer">
+              <img
+                src="Images/Dexter-netflix.webp"
+                alt=""
+                class="rounded hover:scale-105"
+              />
+            </div>
+            <div class="swiper-slide cursor-pointer">
+              <img
+                src="Images/Breaking-bad-netflix.webp"
+                alt=""
+                class="rounded hover:scale-105"
+              />
+            </div>
+            <div class="swiper-slide cursor-pointer">
+              <img
+                src="Images/Ozark-netflix.jpg"
+                alt=""
+                class="rounded hover:scale-105"
+              />
+            </div>
+            <div class="swiper-slide cursor-pointer">
+              <img
+                src="Images/Law-&-order-netflix.webp"
+                alt=""
+                class="rounded hover:scale-105"
+              />
+            </div>
+            <div class="swiper-slide cursor-pointer">
+              <img
+                src="Images/Dahmar-netflix.jpg"
+                alt=""
+                class="rounded hover:scale-105"
+              />
+            </div>
+            <div class="swiper-slide cursor-pointer">
+              <img
+                src="Images/Monsters-netflixx.jpg"
+                alt=""
+                class="rounded hover:scale-105"
+              />
+            </div>
+            <div class="swiper-slide cursor-pointer">
+              <img
+                src="Images/House-of-cards.jpg"
+                alt=""
+                class="rounded hover:scale-105"
+              />
+            </div>
+            <div class="swiper-slide cursor-pointer">
+              <img
+                src="Images/Godless-netflix.jpg"
+                alt=""
+                class="rounded hover:scale-105"
+              />
+            </div>
+            ...
+          </div>
+
+          <!-- If we need navigation buttons -->
+          <div class="swiper-button-prev max-h-8 text-orange-500"></div>
+          <div class="swiper-button-next max-h-8"></div>
+
+          <!-- <style>
+            .swiper-button-prev,
+            .swiper-button-next {
+              color: orange;
+            }
+          </style> -->
+        </div>
+      </section>
+
+      <!-- Break Time? Have a Screen Snack -->
+      <section class="bg-[#141414] p-4">
+        <div class="p-4 text-white">
+          <h2 class="text-xl font-bold">Break Time? Have a Screen Snack</h2>
+        </div>
+
+        <!-- Slider main container -->
+        <div class="swiper h-[200px]">
+          <!-- Additional required wrapper -->
+          <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide cursor-pointer">
+              <img
+                src="ImagesTwo/Beauty-in-black-netflix.jpg"
+                alt=""
+                class="rounded hover:scale-105"
+              />
+            </div>
+            <div class="swiper-slide cursor-pointer">
+              <img
+                src="ImagesTwo/Lioness-netflix.webp"
+                alt=""
+                class="rounded hover:scale-105"
+              />
+            </div>
+            <div class="swiper-slide cursor-pointer">
+              <img
+                src="ImagesTwo/House-of-guinness.jpg"
+                alt=""
+                class="rounded hover:scale-105"
+              />
+            </div>
+            <div class="swiper-slide cursor-pointer">
+              <img
+                src="ImagesTwo/Wednesday-netflix.jpg"
+                alt=""
+                class="rounded hover:scale-105"
+              />
+            </div>
+            <div class="swiper-slide cursor-pointer">
+              <img
+                src="ImagesTwo/You-netflix.jpg"
+                alt=""
+                class="rounded hover:scale-105"
+              />
+            </div>
+            <div class="swiper-slide cursor-pointer">
+              <img
+                src="ImagesTwo/The-resident-netflix.webp"
+                alt=""
+                class="rounded hover:scale-105"
+              />
+            </div>
+            <div class="swiper-slide cursor-pointer">
+              <img
+                src="ImagesTwo/Billonaires'-bunker-netflix.jpg"
+                alt=""
+                class="rounded hover:scale-105"
+              />
+            </div>
+            <div class="swiper-slide cursor-pointer">
+              <img
+                src="ImagesTwo/The-Night-Agent-netflix.jpg"
+                alt=""
+                class="rounded hover:scale-105"
+              />
+            </div>
+            ...
+          </div>
+
+          <!-- If we need navigation buttons -->
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+        </div>
+      </section>
+
+      <!-- Boredom Busters -->
+      <section class="bg-[#141414] p-4">
+        <div class="p-4 text-white">
+          <h2 class="text-xl font-bold">Boredom Busters</h2>
+        </div>
+
+        <!-- Slider main container -->
+        <div class="swiper h-[200px]">
+          <!-- Additional required wrapper -->
+          <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide cursor-pointer">
+              <img
+                src="ImagesThree/Alice-in-borderland-netflix.jpg"
+                alt=""
+                class="rounded hover:scale-105"
+              />
+            </div>
+            <div class="swiper-slide cursor-pointer">
+              <img
+                src="ImagesThree/Power-netflix.webp"
+                alt=""
+                class="rounded hover:scale-105"
+              />
+            </div>
+            <div class="swiper-slide cursor-pointer">
+              <img
+                src="ImagesThree/Demon-slayer-netflix.webp"
+                alt=""
+                class="rounded hover:scale-105"
+              />
+            </div>
+            <div class="swiper-slide cursor-pointer">
+              <img
+                src="ImagesThree/Swat-netflix.webp"
+                alt=""
+                class="rounded hover:scale-105"
+              />
+            </div>
+            <div class="swiper-slide cursor-pointer">
+              <img
+                src="ImagesThree/Suits-netflix.webp"
+                alt=""
+                class="rounded hover:scale-105"
+              />
+            </div>
+            <div class="swiper-slide cursor-pointer">
+              <img
+                src="ImagesThree/Pinky-blinders-netflix.webp"
+                alt=""
+                class="rounded hover:scale-105"
+              />
+            </div>
+            <div class="swiper-slide cursor-pointer">
+              <img
+                src="ImagesThree/Man-on-fire-netflix.webp"
+                alt=""
+                class="rounded hover:scale-105"
+              />
+            </div>
+            <div class="swiper-slide cursor-pointer">
+              <img
+                src="ImagesThree/Vikings-netflix.webp"
+                alt=""
+                class="rounded hover:scale-105"
+              />
+            </div>
+            ...
+          </div>
+
+          <!-- If we need navigation buttons -->
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+        </div>
+      </section>
+
+      <!-- Top 10 Series in UK Today -->
+      <section class="bg-[#141414] p-4">
+        <div class="p-4 text-white">
+          <h2 class="text-xl font-bold">Top 10 Series in UK Today</h2>
+        </div>
+
+        <!-- Slider main container -->
+        <div class="swiper h-[400px]">
+          <!-- Additional required wrapper -->
+          <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide cursor-pointer">
+              <img
+                src="ImagesTop10/Monster-the-ed-story.jpg"
+                alt=""
+                class="rounded hover:scale-105"
+              />
+            </div>
+            <div class="swiper-slide cursor-pointer">
+              <img
+                src="ImagesTop10/House-of-g.jpg"
+                alt=""
+                class="rounded hover:scale-105"
+              />
+            </div>
+            <div class="swiper-slide cursor-pointer">
+              <img
+                src="ImagesTop10/Wayward-netflix.jpg"
+                alt=""
+                class="rounded hover:scale-105"
+              />
+            </div>
+            <div class="swiper-slide cursor-pointer">
+              <img
+                src="ImagesTop10/Sullivans's-crossing.webp"
+                alt=""
+                class="rounded hover:scale-105"
+              />
+            </div>
+            <div class="swiper-slide cursor-pointer">
+              <img
+                src="ImagesTop10/Dark-winds.webp"
+                alt=""
+                class="rounded hover:scale-105"
+              />
+            </div>
+            <div class="swiper-slide cursor-pointer">
+              <img
+                src="ImagesTop10/Ops-lioness.webp"
+                alt=""
+                class="rounded hover:scale-105"
+              />
+            </div>
+            <div class="swiper-slide cursor-pointer">
+              <img
+                src="ImagesTop10/Love-is-blind.jpg"
+                alt=""
+                class="rounded hover:scale-105"
+              />
+            </div>
+            <div class="swiper-slide cursor-pointer">
+              <img
+                src="ImagesTop10/Black-rabbit.jpg"
+                alt=""
+                class="rounded hover:scale-105"
+              />
+            </div>
+            <div class="swiper-slide cursor-pointer">
+              <img
+                src="ImagesTop10/Angela-netflix.jpg"
+                alt=""
+                class="rounded hover:scale-105"
+              />
+            </div>
+            <div class="swiper-slide cursor-pointer">
+              <img
+                src="ImagesTop10/wwe-smackdown.jpg"
+                alt=""
+                class="rounded hover:scale-105"
+              />
+            </div>
+            ...
+          </div>
+
+          <!-- If we need navigation buttons -->
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+        </div>
+      </section>
+
+      <!-- My List -->
+      <section class="bg-[#141414] p-4">
+        <div class="p-4 text-white">
+          <h2 class="text-xl font-bold">My List</h2>
+        </div>
+
+        <!-- Slider main container -->
+        <div class="swiper h-[200px]">
+          <!-- Additional required wrapper -->
+          <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide cursor-pointer">
+              <img
+                src="ImagesMyList/Big-mouth-netflix.jpg"
+                alt=""
+                class="rounded hover:scale-105"
+              />
+            </div>
+            <div class="swiper-slide cursor-pointer">
+              <img
+                src="ImagesMyList/Sexlife-netflix.jpg"
+                alt=""
+                class="rounded hover:scale-105"
+              />
+            </div>
+            <div class="swiper-slide cursor-pointer">
+              <img
+                src="ImagesMyList/Castlevina-netflix.jpg"
+                alt=""
+                class="rounded hover:scale-105"
+              />
+            </div>
+            <div class="swiper-slide cursor-pointer">
+              <img
+                src="ImagesMyList/Bridgerton-netflix.jpg"
+                alt=""
+                class="rounded hover:scale-105"
+              />
+            </div>
+            <div class="swiper-slide cursor-pointer">
+              <img
+                src="ImagesMyList/Narcos-netflix.jpg"
+                alt=""
+                class="rounded hover:scale-105"
+              />
+            </div>
+            <div class="swiper-slide cursor-pointer">
+              <img
+                src="ImagesMyList/Grand-turismo-netflix.webp"
+                alt=""
+                class="rounded hover:scale-105"
+              />
+            </div>
+            <div class="swiper-slide cursor-pointer">
+              <img
+                src="ImagesMyList/Rebel-ridge-netflix.jpg"
+                alt=""
+                class="rounded hover:scale-105"
+              />
+            </div>
+            <div class="swiper-slide cursor-pointer">
+              <img
+                src="ImagesMyList/Downtown-abby-netflix.webp"
+                alt=""
+                class="rounded hover:scale-105"
+              />
+            </div>
+            ...
+          </div>
+
+          <!-- If we need navigation buttons -->
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+
+    <section class="bg-[#141414] p-8 items-center">
+      <footer>
+        <div class="text-gray-400 text-sm space-y-4">
+          <div class="flex space-x-4">
+            <a href="https://www.facebook.com/NetflixUK" target="_blank"
+              ><img
+                src="ImagesSocialicons/facebook (1).png"
+                alt=""
+                class="h-6 w-6"
+            /></a>
+            <a href="https://www.instagram.com/NetflixUK/#" target="_blank"
+              ><img
+                src="ImagesSocialicons/instagram (1).png"
+                alt=""
+                class="h-6 w-6"
+            /></a>
+            <a href="https://x.com/NetflixUK" target="_blank"
+              ><img
+                src="ImagesSocialicons/twitter (1).png"
+                alt=""
+                class="h-6 w-6"
+            /></a>
+            <a href="https://www.youtube.com/user/netflixuk" target="_blank"
+              ><img src="ImagesSocialicons/youtube.png" alt="" class="h-6 w-6"
+            /></a>
+          </div>
+          <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+            <a href="#" class="hover:underline">FAQ</a>
+            <a href="#" class="hover:underline">Help Centre</a>
+            <a href="#" class="hover:underline">Account</a>
+            <a href="#" class="hover:underline">Media Centre</a>
+            <a href="#" class="hover:underline">Investor Relations</a>
+            <a href="#" class="hover:underline">Jobs</a>
+            <a href="#" class="hover:underline">Ways to Watch</a>
+            <a href="#" class="hover:underline">Terms of Use</a>
+            <a href="#" class="hover:underline">Privacy</a>
+            <a href="#" class="hover:underline">Cookie Preferences</a>
+            <a href="#" class="hover:underline">Corporate Information</a>
+            <a href="#" class="hover:underline">Contact Us</a>
+            <a href="#" class="hover:underline">Speed Test</a>
+            <a href="#" class="hover:underline">Legal Notices</a>
+            <a href="#" class="hover:underline">Only on Netflix</a>
+          </div>
+          <p class="text-gray-500">Netflix United Kingdom</p>
+        </div>
+      </footer>
+    </section>
+
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
     <script src="script.js"></script>
-</body>
+  </body>
 </html>
-
- 
